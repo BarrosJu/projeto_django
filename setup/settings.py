@@ -43,8 +43,12 @@ INSTALLED_APPS = [
     'instrutor.apps.InstrutorConfig',
     'titulo.apps.TituloConfig',
     'turma.apps.TurmaConfig',
+<<<<<<< HEAD
     'utilitarios.apps.UtilitariosConfig',
 
+=======
+    'utilitario.apps.UtilitarioConfig',
+>>>>>>> b531f7fa8ffbad8ef919f411a5883709e336a0a9
 ]
 
 MIDDLEWARE = [
@@ -62,9 +66,14 @@ ROOT_URLCONF = 'setup.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [ 
             BASE_DIR, 'templates'
         ],
+=======
+        'DIRS': 
+            [BASE_DIR, 'templates'],
+>>>>>>> b531f7fa8ffbad8ef919f411a5883709e336a0a9
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,10 +135,17 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_DIRS = [
+<<<<<<< HEAD
     BASE_DIR / STATIC_URL
 ]
  
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+=======
+    BASE_DIR / STATIC_URL,
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+>>>>>>> b531f7fa8ffbad8ef919f411a5883709e336a0a9
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
