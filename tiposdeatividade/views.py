@@ -9,15 +9,9 @@ def exibe_mensagem(request):
     return HttpResponse(t_html)
 
 def exibe_html_simples(request):
-
     t_html = '<html><body>Ola<body><html>'
     return HttpResponse(t_html)
 
 def test_render(request):
-    return render(request, 'escola.hmtl')
-    t_html = '<html><body>Hello</body></html>'
-    return HttpResponse(t_html)
-
-def test_render(request):
-    return render(request, 'index.html')    
+    return render(request, 'escola.html')    
 

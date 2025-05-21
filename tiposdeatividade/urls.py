@@ -8,9 +8,5 @@ urlpatterns = [
 
     path("exibemensagemsimples", views.exibe_html_simples,
           name="exibe_mensagem_simples"),
-    path("test_render",views.test_render, name="render_exibir"),
-
-    path('exibemensagensimples', views.exibe_html_simples, name="exibe_html_simples"),
-    path("test_render", views.test_render,name="render_exibir"),
-
+    path("test_render", views.test_render, name="render_exibir"),
 ]
