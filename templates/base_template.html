@@ -5,6 +5,7 @@
 <head>
     {% block title %}
     {% endblock %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -39,7 +40,7 @@
             <div>
                 <a class="navbar-brand mx-auto">
                     <img src="{% static 'img/python_64.png' %}">
-                    <img src="{% static 'img/python_64.png' %}">
+                    
                 </a>
             </div>
 
@@ -49,24 +50,19 @@
             </button>
 
             <!-- menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
-                <div class="navbar-nav">
-                    <a href="./escola.html" class="nav-link">Início</a>
-                    <a href="./tipoatividade/cadastroTiposAtividade.html" class="nav-link">Tipos de Atividade</a>
-                    <a href="./titulo/cadastroTitulos.html" class="nav-link">Títulos</a>
-                    <a href="{% url 'aluno:listar'%}" class="nav-link">Alunos</a>
-                    <a href="./instrutor/cadastroInstrutor.html" class="nav-link">Instrutor</a>
-                    <a href="./turma/cadastroTurma.html" class="nav-link">Turmas</a>
-                    <a href="./contato/contato.html" class="nav-link">Contato</a>
-                </div>
-            </div>
+            {% block menu %}
+            {% endblock %}
+            
         </nav>
 
         {% block titulo_pagina %}
-        {% endblock%}
+        {% endblock %}
+        
     </header>
-     {% block corpo%}
-     {% endblock%}
+
+     {% block corpo %}
+     {% endblock %}
+
     <footer class="container text-center">
         <div class="row border-top border-primary bg-light">
             <div class="col font text-primary copyright">
