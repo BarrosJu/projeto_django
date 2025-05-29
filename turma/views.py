@@ -1,5 +1,11 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
-def exibe_mensagem(request):
-  return HttpResponse("Página da Turma")
+def listar(request):
+  return render(request, 'turma/listarTurmas.html')
+
+def cadastrar(request):
+  return render(request, 'turma/cadastroTurma.html')
+
+def registroAusencia(request):
+  return render(request, 'turma/registroAusencia.html')
