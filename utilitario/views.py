@@ -1,6 +1,6 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render
 
 # Create your views here.
 
-def exibe_mensagem(request):
-    return HttpResponse("Página do utilitario")
+def cadastrar(request):
+    return render(request, 'utilitario/contato.html')
