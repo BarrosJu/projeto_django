@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -9,7 +10,7 @@ class Aluno(models.Model):
     nome= models.CharField(max_length=100,
                             help_text='Informe o nome do aluno')
     
-    data_incial = models.DateField(null=False,
+    data_inicial = models.DateField(null=False,
                                    default=timezone.now(),
                                    help_text='Informe a data de inicio do aluno')
     
@@ -19,5 +20,5 @@ class Aluno(models.Model):
                                   help_text='Informe a data final do aluno')
 
     def __str__(self):
-        return f'{self.matricula} - {self.nome} - {self.data_incial} - {self.data_final}'
+        return f'{self.matricula} - {self.nome} - {self.data_inicial} - {self.data_final}'
         
